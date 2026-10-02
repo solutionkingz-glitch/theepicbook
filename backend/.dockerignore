@@ -1,0 +1,15 @@
+.git
+.env
+.env.*
+node_modules
+npm-debug.log*
+Dockerfile*
+.dockerignore
+*.log
+logs
+coverage
+.vscode
+.idea
+.DS_Store
+Thumbs.db
+*.swp

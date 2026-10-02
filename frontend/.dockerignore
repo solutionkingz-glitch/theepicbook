@@ -1,0 +1,14 @@
+.git
+.env
+.env.*
+node_modules
+npm-debug.log*
+Dockerfile*
+.dockerignore
+*.log
+logs
+.vscode
+.idea
+.DS_Store
+Thumbs.db
+*.swp

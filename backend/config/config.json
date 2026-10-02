@@ -1,7 +1,7 @@
 {
   "development": {
     "username": "root",
-    "password": "demo1234",
+    "password": "replace_me",
     "database": "bookstore",
     "host": "127.0.0.1",
     "dialect": "mysql"

@@ -1,5 +1,3 @@
-"use strict";
-
 const express = require("express");
 const exphbs = require("express-handlebars");
 
@@ -9,6 +7,16 @@ const db = require("./models");
 const PORT = process.env.PORT || 8080;
 
 const app = express();
+
+// Health endpoint: returns 200 only when the database answers
+app.get("/health", async (req, res) => {
+  try {
+    await db.sequelize.authenticate();
+    res.status(200).json({ status: "ok" });
+  } catch (err) {
+    res.status(503).json({ status: "unavailable" });
+  }
+});
 
 // Serve static content for the app from the "public" directory in the application directory.
 app.use(express.static("public"));
